@@ -155,6 +155,7 @@ a {
 @media only screen and (min-width: 768px) {
 	.header {
 		height: 70px;
+		padding-right: 3em;
 	}
 	.header #mm_logo {
 		margin: 5px 0 0 5%;
