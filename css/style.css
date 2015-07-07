@@ -119,31 +119,7 @@ a {
 	margin-left: 25px;
 }
 
-.header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50px;
-	background: rgba(255, 255, 255, 0.95);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-	z-index: 2;
-}
 
-.header:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.header #mm_logo {
-	float: left;
-}
-
-.header #mm_logo img {
-	display: block;
-	height: 58px;
-}
 
 .content  img {
 	display: block;
@@ -152,97 +128,7 @@ a {
 	height: 100px;
 }
 
-@media only screen and (min-width: 768px) {
-	.header {
-		height: 70px;
-		padding-right: 3em;
-	}
-	.header #mm_logo {
-		margin: 5px 0 0 5%;
-	}
-}
 
-.main-nav {
-  float: right;
-  margin-right: 5%;
-  width: 44px;
-  height: 100%;
-  background: url("/images/cd-icon-menu.svg") no-repeat center center;
-  background-size: 44px 44px;
-  cursor: pointer;
-}
-.main-nav ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-.main-nav ul.is-visible {
-  -webkit-transform: translateY(50px);
-  -moz-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  -o-transform: translateY(50px);
-  transform: translateY(50px);
-}
-.main-nav a {
-  display: block;
-  height: 50px;
-  line-height: 50px;
-  padding-left: 5%;
-  background: #2f292a;
-  border-top: 1px solid #453c3d;
-  color: #8e7d7f;
-}
-@media only screen and (min-width: 768px) {
-  .main-nav {
-    width: auto;
-    height: auto;
-    background: none;
-    cursor: auto;
-  }
-  .main-nav ul {
-    position: static;
-    width: auto;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-    line-height: 70px;
-  }
-  .main-nav ul.is-visible {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-  .main-nav li {
-    display: inline-block;
-    margin-left: 1em;
-  }
-  .main-nav a {
-    display: inline-block;
-    height: auto;
-    line-height: normal;
-    background: transparent;
-    padding: .6em 1em;
-    border-top: none;
-    color: #3d3536;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
-  .no-touch .main-nav a:hover {
-    color: #99a478;
-  }
-}
 
 .main-content {
 	/* you need to assign a min-height to the main content so that the children can inherit it*/
