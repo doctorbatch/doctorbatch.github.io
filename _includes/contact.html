@@ -1,20 +1,12 @@
 
-<div id="contact" class="fixed potsdam">
-	<div class="sectiontext">
-		<h1>Contact Us</h1>
-		<br />
-		<h3>We'd love to hear from you!</h3>
-		<br> <br>
-	</div>
-	<div class="attribution">
-		<a href="https://commons.wikimedia.org/wiki/File:Market_Street_Historic_District,_Potsdam,_New_York.JPG">Market Street Historic District, Potsdam, New York</a>
-		by <a href="https://commons.wikimedia.org/wiki/User:Mwanner">Mwanner</a> <a
-			href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">CC BY-SA 3.0</a>
-	</div>
-</div>
+
+{% include section-head.html identification="contact" title="Contact Us" subtitle="" splash="potsdam"%}
+
 
 <div class="scrolling">
-	<div class="content">
+	<div class="container contact">
+
+	<h1>Send us an e-mail</h1><br/>
 		<div class="contactreset">
 			<form id="frmContact" autocomplete="on"
 				action="https://getsimpleform.com/messages?form_api_token={{page.simpleformtoken}}"
@@ -58,8 +50,13 @@
 			</form>
 
 
-		</div>
-	</div>
+		</div> <!-- contactreset -->
+
+
+	</div> <!-- container -->
+
+</div> <!-- scrolling -->
+
 	<div id="contactthankyou" class="overlay">
 		<div class="popup">
 			<div class="profile">
@@ -70,6 +67,3 @@
 			</div>
 		</div>
 	</div>
-</div>
-
-

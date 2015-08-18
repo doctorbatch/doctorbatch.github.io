@@ -5,16 +5,17 @@
 			</div>
 		</div>
 		<div class="scrolling">
-			<div class="content">
-			<div class="column-right solo">
-				<div class="story">Doctor Batch's Magic Sauce has finally arrived: <a href="https://github.com/WASdev/lib.batch.magicsauce">Find it on GitHub!</a></div>
+			<div class="container">
 				<h3>About</h3>
-				<div class="story">
+				<p>Doctor Batch's Magic Sauce has finally arrived: <a href="https://github.com/WASdev/lib.batch.magicsauce">Find it on GitHub!</a></p>
 				<p>Doctor Batch's Magic Sauce is an API for developing batch applications in the Java programming language targetted for deployment to IBM's WebSphere Batch or WebSphere Liberty Profile's Java EE Batch runtime environments. The magic sauce provides portability between the two runtimes by abstracting application development away from the runtime-specific API, and providing adapters for deployment.</p>
-				<p>The Magic Sauce is being released as an Apache 2.0 License open-source project, and will be available soon from <a href="http://wasdev.net">IBM WebSphere Developerworks</a>'s GitHub repository.</p> 
-				</div>
-			</div>
+				<p>The Magic Sauce is being released as an Apache 2.0 License open-source project, and will be available soon from <a href="http://wasdev.net">IBM WebSphere Developerworks</a>'s GitHub repository.</p>
+
+					{% for post in site.posts reversed %}
+					{% if post.categories contains 'installation' %}
+					{{ post.content }}
+					{% endif %}
+					{% endfor %}
 			</div>
 		</div>
 		<!--End Magic Sauce-->
-

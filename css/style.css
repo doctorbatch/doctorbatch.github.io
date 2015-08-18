@@ -1,56 +1,7 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
-	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
-	center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
-	caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
-	details, embed, figure, figcaption, hgroup, menu, nav,
-	output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, hgroup,
-	menu, nav, section, main {
-	display: block;
-}
-
-body {
-	line-height: 1;
-}
-
-ol, ul {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-
-body {
-	line-height: 1;
-}
-
 html * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -68,65 +19,137 @@ body, html {
 	height: 100%;
 }
 
+body {
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+
 a {
-	color: #D59A7C;
+	color: #792681;
 	text-decoration: none;
 }
 
-.content {
-	/* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-	width: 90%;
-	max-width: 5000px;
-	margin: 0 auto;
-	table-layout: fixed;
-	border-spacing: 10px;
+.banner {
+	width: 75%;
 }
 
-.content::after {
-	/* clearfix */
-	content: '';
-	display: table;
-	clear: both;
+@media only screen and (min-width: 768px) {
+	.banner {
+		width: 40%;
+	}
 }
 
-.content a:link {
-	color: #D59A7C;
-	font-weight: bold
+.trilliumnav {
+	background: rgba(255, 255, 255, 0.95);
+	font-size: initial;
 }
 
-.content a:visited {
-	color: #D59A7C;
-	font-weight: bold
+.trilliumnav  img {
+	display: inline;
+	height: 80%;
+	margin: initial;
+	padding: initial;
+	align: initial;
 }
 
-/* .content a:hover { 
-	color: #D59A7C;  
- 	font-weight: bold;
-}
-.content a:active{ 
-	color: #D59A7C;  
-	border: 2px solid #D59A7C; 
-	padding: 3px;
- 	font-weight: bold;
-}
- */
-.content li {
-	text-align: left;
-	list-style-type: square;
-	padding-left: 3px;
-	margin-left: 25px;
+@media only screen and (min-width: 768px) {
+	.header {
+		height: 70px;
+	}
 }
 
+.fade {
+	background: rgba(255, 255, 255, 0.95);
+}
 
+.main-nav {
+	float: right;
+	margin-right: 5%;
+	width: 44px;
+	height: 100%;
+	background: url("/images/cd-icon-menu.svg") no-repeat center center;
+	background-size: 44px 44px;
+	cursor: pointer;
+}
 
-.content  img {
+.main-nav ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.main-nav ul.is-visible {
+	-webkit-transform: translateY(50px);
+	-moz-transform: translateY(50px);
+	-ms-transform: translateY(50px);
+	-o-transform: translateY(50px);
+	transform: translateY(50px);
+}
+
+.main-nav a {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	height: 100px;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 5%;
+	background: #2f292a;
+	border-top: 1px solid #453c3d;
+	color: #8e7d7f;
 }
 
-
+@media only screen and (min-width: 768px) {
+	.main-nav {
+		width: auto;
+		height: auto;
+		background: none;
+		cursor: auto;
+	}
+	.main-nav ul {
+		position: static;
+		width: auto;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+		line-height: 70px;
+	}
+	.main-nav ul.is-visible {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0);
+	}
+	.main-nav li {
+		display: inline-block;
+		margin-left: 1em;
+	}
+	.main-nav a {
+		display: inline-block;
+		height: auto;
+		line-height: normal;
+		background: transparent;
+		padding: .6em 1em;
+		border-top: none;
+		color: #3d3536;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+	.no-touch .main-nav a:hover {
+		color: #99a478;
+	}
+}
 
 .main-content {
 	/* you need to assign a min-height to the main content so that the children can inherit it*/
@@ -135,13 +158,32 @@ a {
 	z-index: 1;
 }
 
+
 .fixed {
-	position: relative;
-	min-height: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	z-index: 1;
+  position: relative;
+  min-height: 70%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1170px) {
+  .fixed {
+    background-attachment: fixed;
+  }
+  .fixed h1, .fixed h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) {
 }
 
 .sectiontext {
@@ -164,17 +206,13 @@ a {
 	color: white;
 }
 
+.container  {
+	font-size: large;
+}
+
 .sectiontext a {
 	padding: 15px;
 	font-weight: bold;
-}
-
-
-pre.code {
-	text-align: left;
-	font-family: monospace;
-	font-size: large;
-	line-height: normal;
 }
 
 .attribution {
@@ -183,10 +221,6 @@ pre.code {
 	bottom: 0;
 	right: 0;
 	color: rgb(255, 255, 255);
-}
-
-.fixed.suryathon {
-	background-image: url("/images/suryathon4.jpg");
 }
 
 .fixed.potsdam {
@@ -205,13 +239,9 @@ pre.code {
   background-image: url("/images/sauce.jpg");
 }
 
-.fixed.willow {
-	background-image: url("/images/willow-fall.jpg");
-}
-
 @media only screen and (min-width: 768px) {
 	.fixed {
-		background-attachment: fixed;
+
 	}
 	.fixed h1, .fixed h2 {
 		font-size: 36px;
@@ -219,7 +249,6 @@ pre.code {
 }
 
 @media only screen and (min-width: 1170px) {
-
 	.fixed h1, .fixed h2 {
 		font-size: 48px;
 		font-weight: 300;
@@ -231,6 +260,7 @@ pre.code {
 }
 
 .scrolling {
+	min-height: 30%;
 	padding: 5px;
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 	z-index: 2;
@@ -256,7 +286,7 @@ pre.code {
 		padding: 2em 0;
 		font-size: 20px;
 		font-size: 1.25rem;
-		line-height: 2;
+		line-height: 1.25;
 		font-weight: 300;
 	}
 }
@@ -287,28 +317,6 @@ address {
 	list-style-type: square;
 }
 
-.content h2 {
-	display: block;
-	font-size: 1.5em;
-	margin-top: 0.83em;
-	margin-bottom: 0.83em;
-	margin-left: 0;
-	margin-right: 0;
-	font-weight: bold;
-	color: #8F0047;
-}
-
-.content h3 {
-	display: block;
-	font-size: 1.0em;
-	margin-top: 0.83em;
-	margin-bottom: 0.83em;
-	margin-left: 0;
-	margin-right: 0;
-	font-weight: bold;
-	color: #8F0047;
-}
-
 .footer {
 	position: fixed;
 	bottom: 0;
@@ -327,11 +335,6 @@ address {
 .footer ul li {
 	display: inline;
 	padding-left: 10px;
-}
-
-.content>div {
-	display: table-cell;
-	width: 33.3333%
 }
 
 .column-left {
@@ -355,7 +358,6 @@ address {
 	padding: 6px;
 	max-width: 33%;
 }
-
 
 .code {
 	font-family: monospace;
@@ -430,24 +432,6 @@ address {
 	background-color: #0061a7;
 }
 
-#close a {
-	background: -webkit-linear-gradient(#333, #000);
-	background: -o-linear-gradient(#333, #000);
-	background: -ms-linear-gradient(#333, #000);
-	background: linear-gradient(#333, #000);
-	font-family: 'Electrolize', Arial, sans-serif;
-	padding: 10px;
-	top: 15px;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-ms-border-radius: 3px;
-	position: relative;
-}
-
-#close a:hover {
-	text-decoration: none;
-}
-
 /*Popup*/
 #box-menu a {
 	text-transform: uppercase;
@@ -488,22 +472,98 @@ address {
 	background-color: #0061a7;
 }
 
-#close a {
-	background: -webkit-linear-gradient(#333, #000);
-	background: -o-linear-gradient(#333, #000);
-	background: -ms-linear-gradient(#333, #000);
-	background: linear-gradient(#333, #000);
-	font-family: 'Electrolize', Arial, sans-serif;
-	padding: 10px;
-	top: 15px;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-ms-border-radius: 3px;
-	position: relative;
+/**
+ * Teacher bio popup styles
+ */
+.teacher-bio {
+	top: 75px !important;
 }
 
-#close a:hover {
-	text-decoration: none;
+.teacher-bio p {
+	padding: 5px;
+	margin-top: 2px;
+	font-size: medium;
+	line-height: 1.25;
+}
+
+/**
+ * TEACHER PROFILE THUMBS
+ */
+.profileblocks {
+
+}
+
+.profile-thumb  img {
+	width: 200px;
+}
+
+.profile-thumb {
+	text-align: center;
+}
+
+.profileblock {
+
+}
+
+.profilestretch {
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	line-height: 0
+}
+
+.profileblock img {
+	max-width: 100%;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.profileblock h3 {
+	text-align: center;
+	font-size: 1.0em;
+	margin-top: 0px;
+	margin-bottom: 0.83em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
+	color: #8F0047;
+}
+
+/**
+ * BOOTSTRAP CUSTOMIZATIONS
+ */
+.btn-lg.round {
+	border-radius: 24px;
+}
+
+/**
+ * CONTACT FORM STYLE OVERRIDES
+ */
+.contactreset {
+	width: 70%;
+	margin: auto;
+	padding: 0px;
+	box-shadow: initial;
+	font-size: 20px;
+	font-size: initial;
+	line-height: initial;
+	font-weight: 300;
+	display: block;
+}
+
+.contactreset label {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.contactreset ul {
+	list-style: none;
+}
+
+.contactreset ul li {
+	display: block;
+	padding-left: 0px;
 }
 
 /**
@@ -527,7 +587,7 @@ address {
 }
 
 .button:hover {
-	
+
 }
 
 .overlay {
@@ -580,107 +640,97 @@ address {
 	color: orange;
 }
 
-.popup .content {
+.popup {
 	max-height: 30%;
 	overflow: auto;
 }
 
 /**
- * TEACHER PROFILE THUMBS
- */
-.profileblocks {
-	height: 100%;
-	width: 100%;
-	padding: 20px;
-	text-align: justify;
-	-ms-text-justify: distribute-all-lines;
-	text-justify: distribute-all-lines;
-}
-
-.profileblock {
-	width: 200px;
-	vertical-align: top;
-	display: inline-block;
-	*display: inline;
-}
-
-.profilestretch {
-	width: 100%;
-	display: inline-block;
-	font-size: 0;
-	line-height: 0
-}
-
-.profileblock img {
-	max-width: 100%;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-}
-
-.profileblock h3 {
-	text-align: center;
-	font-size: 1.0em;
-	margin-top: 0px;
-	margin-bottom: 0.83em;
-	margin-left: 0;
-	margin-right: 0;
-	font-weight: bold;
-	color: #8F0047;
-}
-
-/**
- * BOOTSTRAP CUSTOMIZATIONS
- */
-.btn-lg.round {
-    border-radius: 24px;
-}
-
-
-/**
- * CONTACT FORM STYLE OVERRIDES 
- */
-.contactreset {
-	width: 70%;
-	margin: auto;
-	padding: 0px;
-	box-shadow: initial;
-	font-size: 20px;
-	font-size: initial;
-	line-height: initial;
-	font-weight: 300;
-	display: block;
-}
-
-.contactreset label {
-	display: block;
-	padding: 0px;
-	margin: 0px;
-}
-
-.contactreset ul {
-	list-style: none;
-}
-
-.contactreset ul li {
-	display: block;
-	padding-left: 0px;
-}
-
-
-/**
- * FACEBOOK BTN 
+ * FACEBOOK BTN
  */
 .facebook-btn {
 	display: block;
 	margin: auto;
 	width: 100%;
-
 }
 
 @media only screen and (min-width: 768px) {
 	.facebook-btn {
-		width: 25%;
+		width: 30rem;
 	}
 }
 
+/**
+ * SChedule
+ */
 
+ .scheduledate {
+ 	border-top: 1px solid #eee;
+ 	border-bottom: 1px solid #eee;
+ }
+
+ .scheduledate.notop {
+ 	border-top: none;
+ }
+
+  .scheduledate.notop {
+ 	border-bottom: none;
+ }
+ .classdescription {
+  min-height: 15rem;
+ }
+
+.classdescription p {
+	padding: 0rem;
+	font-size: large;
+}
+
+/**
+ * Jumbotrons
+ */
+.jumbotron.nature {
+	background-size: cover;
+	background-image: url("/images/seneca-nature-trail.jpg");
+	color: #ECF1EF;
+}
+
+.jumbotron.center {
+	background-size: cover;
+	background-image: url("/images/storefront.png");
+	color: #ECF1EF;
+}
+
+
+.jumbotron p {
+	text-shadow: 1px 1px black;
+	font-weight: bold;
+	font-size: large;
+
+	text-align: center;
+	line-height: 1.25;
+
+}
+
+.jumbotron h1 {
+	font-size: xx-large;
+	text-align: center;
+	text-shadow: 2px 2px black;
+}
+
+
+.row
+{
+}
+
+
+.padded {
+	padding-top: 15p;
+}
+
+.logo {
+	display: block;
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+}

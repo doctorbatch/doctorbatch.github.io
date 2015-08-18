@@ -13,88 +13,9 @@
   <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-	
+
   <script src="{{ "/js/jquery-1.11.3.min.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ "/bootstrap-3.3.5-dist/js/bootstrap.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/js/jquery-validation-1.13.1/jquery.validate.min.js" | prepend: site.baseurl }}"></script>
 
-  <script type="text/javascript">
-  $(document).ready(function(){
-		$( "#frmContact" ).validate({
-		invalidHandler: function(event, validator)
-		{
-			var list = validator.errorList;
-			$.each(list, function(index, item)
-			{
-				$(item).addClass("errorLabel");
-			});
-		},
-		rules: 
-		{ 
-			name: 
-			{
-				required: true,
-				minlength: 3
-			},
-			email: 
-			{ 
-				required: function(element)
-				{
-					if(!$("#phone").val() == "") 
-						return false;
-					else
-						return true;
-				}, 
-					email: true 
-			},
-			phone: 
-			{
-				required: true
-				
-			}, 
-			message: 
-			{
-				required: true
-			}
-		},
-		messages: {
-			name: {
-				required: "Please include your name.",
-				minlength: "Please ensure your name is longer than {0} characters.",
-				}
-			
-		}
-	});
-	
-	$("#generalcontact").click(function() {
-	    $("#teacher").val("All");
-	    $("#dLabel").html("General Questions and Comments");
-	});
-
-	$("#gmkcontact").click(function() {
-	    $("#teacher").val("Gurumantra Kaur");
-	    $("#dLabel").html("Gurumantra Kaur");
-	});
-
-	$("#smcontact").click(function() {
-	    $("#teacher").val("Shannon Miller");
-	    $("#dLabel").html("Shannon Miller");
-	});
-
-	$("#jbcontact").click(function() {
-	    $("#teacher").val("Jean Benvenuto");
-	    $("#dLabel").html("Jean Benvenuto");
-	});
-
-	$("#tdlvcontact").click(function() {
-	    $("#teacher").val("Terry de la Vega");
-	    $("#dLabel").html("Terry de la Vega");
-	});
-
-	$("#chcontact").click(function() {
-	    $("#teacher").val("Cintia Hongay");
-	    $("#dLabel").html("Cintia Hongay");
-	});
-
-});</script>
 </head>
