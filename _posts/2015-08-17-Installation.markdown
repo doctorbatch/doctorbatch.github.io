@@ -5,7 +5,7 @@ date: 2015-08-17 12:00:00
 categories: magicsauce installation
 ---
 
-### {{post.title}}
+### Building MagicSauce from Source
 
 To build the magic sauce from source, you'll need to import several dependencies
 from IBM products into your local Maven repository. The dependencies are as follows:
